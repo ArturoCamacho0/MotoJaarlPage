@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MotoJaarl"
+    }
+  },
+  "defaultProject": "MotoJaarl",
+  "cli": {
+    "analytics": false
+  }
 }
