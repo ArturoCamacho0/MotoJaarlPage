@@ -1,0 +1,32 @@
+<div class="body">
+    <mat-card class="card">
+        <mat-card-header>
+            <div class="title">
+                <mat-card-title id="title">Motojaarl</mat-card-title>
+                <mat-card-subtitle id="subtitle">Inicia sesión para continuar</mat-card-subtitle>
+            </div>
+        </mat-card-header>
+
+        <mat-card-content class="content">
+            <div class="form">
+                <mat-form-field class="input_login" appearance="fill">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">Debes ingresar tu usuario</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="input_login" appearance="fill">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error *ngIf="password.invalid">Debes ingresar tu contraseña</mat-error>
+                </mat-form-field>
+
+                <button class="button_login" mat-raised-button color="primary" [disabled]="email.invalid || password.invalid">Continuar</button>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+</div>

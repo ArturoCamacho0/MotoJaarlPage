@@ -1,0 +1,12 @@
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+
+const appRoutes: Routes = [
+    { path: '', redirectTo: '/auth', pathMatch: 'full' },
+    { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) }
+];
+
+export const appRoutingProviders: any[] = [];
+export const routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes, {
+    preloadingStrategy: PreloadAllModules
+});
