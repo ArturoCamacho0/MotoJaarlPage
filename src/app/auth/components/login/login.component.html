@@ -24,7 +24,11 @@
                     <mat-error *ngIf="password.invalid">Debes ingresar tu contraseña</mat-error>
                 </mat-form-field>
 
-                <button class="button_login" mat-raised-button color="primary" [disabled]="email.invalid || password.invalid">Continuar</button>
+                <button class="button_login"
+                mat-raised-button color="primary"
+                [disabled]="email.invalid || password.invalid">
+                    Continuar
+                </button>
             </div>
 
         </mat-card-content>

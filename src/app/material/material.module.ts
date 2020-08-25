@@ -20,6 +20,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 
@@ -46,7 +47,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatPaginatorModule,
     LayoutModule,
     MatFormFieldModule,
-    MatStepperModule
+    MatStepperModule,
+    MatCheckboxModule
   ],
   exports: [
     MatButtonModule,
@@ -67,7 +69,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatPaginatorModule,
     LayoutModule,
     MatFormFieldModule,
-    MatStepperModule
+    MatStepperModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule { }
