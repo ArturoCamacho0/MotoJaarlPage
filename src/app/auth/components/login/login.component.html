@@ -11,13 +11,13 @@
             <div class="form">
                 <mat-form-field class="input_login" appearance="fill">
                     <mat-label>Usuario</mat-label>
-                    <input matInput [formControl]="email" required>
-                    <mat-error *ngIf="email.invalid">Debes ingresar tu usuario</mat-error>
+                    <input matInput [formControl]="user" [(ngModel)]="userInput" required>
+                    <mat-error *ngIf="user.invalid">Debes ingresar tu usuario</mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="input_login" appearance="fill">
                     <mat-label>Contraseña</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required>
+                    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" [(ngModel)]="passwordInput" required>
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
@@ -26,7 +26,8 @@
 
                 <button class="button_login"
                 mat-raised-button color="primary"
-                [disabled]="email.invalid || password.invalid">
+                [disabled]="user.invalid || password.invalid"
+                (click)="login()">
                     Continuar
                 </button>
             </div>

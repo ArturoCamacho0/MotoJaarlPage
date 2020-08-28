@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "arturo-camacho": {
+      "hosting": {
+        "MotoJaarl": [
+          "arturo-camacho"
+        ]
+      }
+    }
+  }
+}
